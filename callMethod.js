@@ -1,4 +1,7 @@
-// call() method
+// call() method:
+// The call() and apply() methods call a function with a given 'this' value and arguments.
+// The difference between the call and apply is that you need to pass the arguments to the apply()
+// method as an array like object. whereas you pass the arguments individully to the call() method.
 
 // function add(x, y) {
 //     return x + y;
@@ -8,7 +11,7 @@
 
 // function add(x, y) {
 //     'use Strict';
-//     console.log(this)
+//     console.log(this) // 
 //     return x + y;
 // }
 
