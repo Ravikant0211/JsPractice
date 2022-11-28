@@ -73,7 +73,7 @@ show(); // true
 // console.log(brand());
 // In this example bind() method sets the this to the bike object.
 
-// 3). Constructor Ivocation
+// 3). Constructor Invocation
 // function Car(brand) {
 //   if (!new.target) {
 //     throw Error("cant't be called without new operator");

@@ -18,7 +18,7 @@
 //     getUsers((users) => {
 //         const user = users.find((user) => user.userId === userId );
 //         callback(user);
-//     });  
+//     });
 // }
 
 // findUser(102, console.log);
@@ -30,7 +30,7 @@
 
 // function findUser(users, username) {
 //     const myUser = users.find(user => user.username === username)
-//     console.log(myUser);   
+//     console.log(myUser);
 // }
 
 // function getUser() {
@@ -49,7 +49,6 @@
 //     })
 // }
 
-
 // getUser()
 //     .then((users)=>{ findUser(users, "Rohit kumar")} )
 //     .catch((error)=>{ console.log(error)} );
@@ -58,36 +57,34 @@
 // ASYNC AWAIT APPROACH: MORE READABLE THEN PROMISE LOOKS LIKE SYNCHRONOUS CODE
 
 async function findUser() {
-    try{
-        const users = await getUser();
-        return users;
-
-    } catch(error) {
-        console.log(error);
-    }
-   
-}   
+  try {
+    const users = await getUser();
+    return users;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 let authorized = false;
 function getUser() {
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (!authorized) {
+        throw new Error("something went wrong");
+      }
 
-            if(!authorized) {
-                throw new Error("something went wrong");
-            }
-
-            resolve(
-                [
-                    {username: "Ravi kant", userId: 101, email: "Ravikant@gmail.com"},
-                    {username: "Rohit kumar", userId: 102, email: "Rohit@gmail.com"},
-                    {username: "Bhavna", userId: 103, email: "Bhavan@gmail.com"}
-            ])
-        })
-   })
+      resolve([
+        { username: "Ravi kant", userId: 101, email: "Ravikant@gmail.com" },
+        { username: "Rohit kumar", userId: 102, email: "Rohit@gmail.com" },
+        { username: "Bhavna", userId: 103, email: "Bhavan@gmail.com" },
+      ]);
+    });
+  });
 }
 
-findUser().then((users)=>{console.log(users)});
+findUser().then((users) => {
+  console.log(users);
+});
 
 // ===================================================================
 // ASYNC AWAIT
@@ -96,11 +93,10 @@ findUser().then((users)=>{console.log(users)});
 //     console.log("Async function")
 //     return Promise.resolve(4);
 // }
-// name().then(res=> res)
+// name().then(res => res)
 //         .then(res => res * 2)
 //         .then(res => res * 2)
 //         .then(res => {console.log(res * 2)})
-
 
 // a promise
 // let promise = new Promise((resolve, reject)=>{
@@ -108,7 +104,7 @@ findUser().then((users)=>{console.log(users)});
 //         resolve("promise resolved")
 //     }, 4000);
 // })
-// // asynchronous function 
+// // asynchronous function
 // async function asyncFunc() {
 
 //     console.log("first");
@@ -121,9 +117,8 @@ findUser().then((users)=>{console.log(users)});
 
 // // calling async function
 // asyncFunc();
-    
 
-// PROMISES ARE USEFUL WHEN THERE ARE MULTIPLE PROMISES TO WORK WITH
+// ASYNC/AWAIT IS USEFUL WHEN THERE ARE MULTIPLE PROMISES TO WORK WITH
 // let promise1 = new Promise((resolve, reject)=>{
 //     setTimeout(()=>{
 //         resolve("one")
@@ -142,7 +137,6 @@ findUser().then((users)=>{console.log(users)});
 //     },8000)
 // })
 
-
 // async function getCount() {
 //     let res1 = await promise1;
 //     console.log(res1);
@@ -153,4 +147,3 @@ findUser().then((users)=>{console.log(users)});
 // }
 
 // getCount();
-
