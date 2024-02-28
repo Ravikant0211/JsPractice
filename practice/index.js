@@ -1,11 +1,10 @@
-const heading1 = document.querySelector('.heading1');
-const heading2 = document.querySelector('.heading2');
-const heading3 = document.querySelector('.heading3');
-const heading4 = document.querySelector('.heading4');
-const heading5 = document.querySelector('.heading5');
-const heading6 = document.querySelector('.heading6');
-const heading7 = document.querySelector('.heading7');
-const heading8 = document.querySelector('.heading8');
+function sum(a, b) {
+    return (a + b);
+}
 
+function average(a, b, fn) {
+    return fn(a, b) / 2;
+}
 
-
+let res = average(5, 3, sum);
+console.log('result: ', res);
