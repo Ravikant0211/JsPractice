@@ -42,66 +42,66 @@
 
 // PROMISE CHAINING
 
-// let condition = true;
-// function resolveAfter4Seconds() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             if (condition) {
-//                 resolve('promise resolved!');   
-//             } else {
-//                 reject('Error thrown!');   
-//             }
-//         });
-//     })
-// }
+let condition = false;
+function resolveAfter4Seconds() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (condition) {
+                resolve('promise resolved!');   
+            } else {
+                reject('Error thrown!');   
+            }
+        });
+    })
+}
 
-// function asyncCall() {
-//     console.log('callling');
-//     const result = resolveAfter4Seconds();
-//     return result
-//         .then(
-//             (res) => { 
-//                 console.log('result1: ', res);
-//                 return `${res}_modified_1`;
-//                 // throw new Error('something went wrong!');
-//             },
-//             (err) => { 
-//                 console.log('error1: ', err) ;
-//                 throw err;
-//             }
-//         )
-//         .then(
-//             (res) => {
-//                 console.log('result2: ', res);
-//                 return `${res}_modified_2`
-//             },
-//             (err) => {
-//                 console.log('error2: ', err);
-//                 throw err;
-//             }
-//         )
-//         .then(
-//             (res) => {
-//                 console.log('result3: ', res);
-//                 return `${res}_modified_3`
-//             },
-//             (err) => {
-//                 console.log('error3: ', err);
-//                 throw err;
-//             }
-//         )
-//         .catch(
-//             (err) => {
-//                 console.log('error4: ', err);
-//                 throw err;
-//             }
-//         )
-// }
+function asyncCall() {
+    console.log('callling');
+    const result = resolveAfter4Seconds();
+    return result
+        .then(
+            (res) => { 
+                console.log('result1: ', res);
+                return `${res}_modified_1`;
+                // throw new Error('something went wrong!');
+            },
+            (err) => { 
+                // console.log('error1: ', err) ;
+                throw err;
+            }
+        )
+        .then(
+            (res) => {
+                // console.log('result2: ', res);
+                return `${res}_modified_2`
+            },
+            (err) => {
+                // console.log('error2: ', err);
+                throw err;
+            }
+        )
+        .then(
+            (res) => {
+                console.log('result3: ', res);
+                return `${res}_modified_3`
+            },
+            (err) => {
+                // console.log('error3: ', err);
+                throw err;
+            }
+        )
+        .catch(
+            (err) => {
+                // console.log('error4: ', err);
+                throw err;
+            }
+        )
+}
 
-// const result = asyncCall();
-// result
-//     .then((res) => {console.log('result4: ', res)})
-//     .catch((err) => {console.log('error4: ', err)});
+const result = asyncCall();
+result
+    .then((res) => {console.log('result4: ', res)})
+    .catch((err) => {console.log('error4: ', err)});
 
 // console.log('immediate logging!');
 
