@@ -1,5 +1,5 @@
 // CLOSURES:-
-// Ans:- In JavaScript closures are the function which references variables int
+// Ans:- In JavaScript closures are the function which references variables in the
 // outer scope from their inner scope.
 // Closure preserves the outer scope in its inner scope
 
