@@ -1,0 +1,25 @@
+Why Design patterns?
+- To make the code efficient, reusable and maintainable.
+
+Design patterns
+- Design pattern are the solution to commonly-recurring issue in software design.
+- can be considered as a template to solve various issues.
+
+Advantages
+- template for different problems
+- clean code by avoiding repetition 
+- allow developers to spend less time on code structure 
+- provide optimal solution, thus reducing the size of codebase.
+
+Drawbacks
+- can complicate the application architecture if poorly managed.
+- less experienced developers can be confused as to why certain
+design pattern is used.
+
+Type of design patterns
+1. Creational design patterns
+2. Structural design patterns
+3. Behavioral design patterns
+4. Architectural design patterns
+
+
