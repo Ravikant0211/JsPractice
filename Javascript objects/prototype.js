@@ -30,3 +30,25 @@ function Person(name) {
 
 console.log(Person);
 console.log(Person.prototype);
+
+
+// The Person() function has a 'prototype' that references an anonymous object.
+// The anonymous object has a 'constructor' property that references the 'Person()' function.
+// In addition javascript links 'Person.prototype' object to 'Object.prototype' object via '[[prototype]]', 
+// which is called 'prototype linkage'.
+
+// DEFINING METHODS IN PROTOTYPE OBJECTS-
+// This creates a greet() method inside 'Person.prototype' object.
+Person.prototype.greet = function () {
+    return "Hi I am " + this.name;
+}
+
+// lets create a person p1
+const p1 = new Person('Ravi kant');
+console.log(p1.greet()) // Hi I am Ravi kant
+// Here newly created 'p1' object is linked to 'Person.prototype' object via [[prototype]] linkage.
+
+const p2 = new Person('Mohit kumar');
+console.log(p2.greet()); // Hi I am Mohit kumar
+// Any number of objects created from "Person" will create the link to 'Person.prototype' object via 
+// [[prototype]] linkage.
