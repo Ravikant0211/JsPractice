@@ -1,5 +1,13 @@
-// IceCreame factory
+// 1. Factory pattern is a creational pattern.
+// 2. It provides a template to create objects which shares similar characteristics.
+// 3. It is used when type of objects varies and needs to be specific in each case.
+// 4. It does not use the 'new' keyword directly to instantiate objects.
+// 5. That means it doesn't require the constructor to create objects.
+// 6. Instead, It provides a generic interface which delegates the task of object
+//    creation to the corresponding subclass.
 
+
+// IceCreame factory
 class IcecreameFactory {
     constructor() {}
     createIceCreame(flavour) {
