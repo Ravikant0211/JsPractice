@@ -1,7 +1,8 @@
 // Constructor pattern-
-// 1. In javascript 'constructor' are the special function that are used to initialize an object with
+// 1. Constructor pattern is a type of creational pattern.
+// 2. In javascript 'constructor' are the special function that are used to initialize an object with
 // special properties and methods.
-// 2. The 'Constructor pattern' as the name defines, is the 'class based' pattern, which uses the constructor
+// 3. The 'Constructor pattern' as the name defines, is the 'class based' pattern, which uses the constructor
 // present in the class to create specific types of objects.
 
 // When to use the 'Constructor Pattern'
