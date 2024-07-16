@@ -14,4 +14,10 @@ class Person {
 }
 
 const person1 = new Person('Ravi kant');
-console.log(person1.getName());
+console.log(person1.getName()); // Hi, This is Ravi kant
+
+
+// Class vs Constructor/prototype pattern
+// 1. 'class' declaration are not 'hoisted' like function declaration.
+// 2. All the code inside a class is executed in 'strict mode' and you can't change this behavior.
+// 3. Class methods are 'non-enumerable' 
