@@ -22,6 +22,6 @@ Think about how these different functionalities interact and ensure your design 
 
 ##### Requirements
 
-Implement the system in a programming language of your choice.
+Implement the system in typescript programming language.
 The code should be executable and demonstrate the system's functionalities.
 Ensure your code is clean, well-organized, and documented.
