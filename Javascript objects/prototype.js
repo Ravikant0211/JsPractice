@@ -26,11 +26,13 @@ console.log(Object.prototype.constructor === Object); // true
 
 function Person(name) {
     this.name = name;
+    this.getName = function () {
+        return this.name;
+    }
 }
 
 console.log(Person);
 console.log(Person.prototype);
-
 
 // The Person() function has a 'prototype' that references an anonymous object.
 // The anonymous object has a 'constructor' property that references the 'Person()' function.
