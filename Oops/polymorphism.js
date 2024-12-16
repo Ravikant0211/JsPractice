@@ -6,7 +6,7 @@ class Animal {
 }
 
 class Lion extends Animal {
-    makeNoise() { // method overriding
+    makeNoise() { // method overriding (Dynamic Polymorphism or runtime polymorphism)
         console.log('Lion is roaring');
     }
 }
