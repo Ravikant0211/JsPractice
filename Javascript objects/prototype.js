@@ -16,6 +16,11 @@ console.log(person);
 
 // Built in Object() funtion.
 console.log(typeof Object); // returns 'function'
+// Object() is a function, not object.
+
+// JavaScript provides an anonymous object that can be referenced via 
+// the prototype property of the Object() function:
+console.log(Object.prototype);
 
 // The 'Object.prototype' has an important property called 'constructor'
 // that references the Object() function.

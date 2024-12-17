@@ -14,7 +14,7 @@
 // undefined
 // null
 
-// When you create these values, they are tightly coupled to the variable they are assigned to. So basically, while
+// When you create primitive type values, they are tightly coupled to the variable they are assigned to. So basically, while
 // copying primitive datatypes in javascript, you don't have to worry about copying. When you make a copy, it will
 // be a real copy.
 
